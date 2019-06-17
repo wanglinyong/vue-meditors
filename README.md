@@ -29,7 +29,7 @@ npm i vue-meditors
 
 
 ```
-import MarkDown from 'vue-meditor'
+import MarkDown from 'vue-meditors'
 
 ...
 
