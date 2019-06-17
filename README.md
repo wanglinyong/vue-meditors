@@ -38,6 +38,7 @@ components:{
 	},
 data() {
       return {
+      	placeholderValue:"请输入问题描述",//placeholder的内容
         initialValue: "",//，markdown默认值
         theme: 'OneDark'//主题
       };
@@ -46,7 +47,7 @@ data() {
 
 <template>
 	<mark-down @on-save="save" ref="md" @on-change="changeImg"
-	:theme="theme" :initialValue="initialValue"/>
+	:theme="theme" :initialValue="initialValue" :placeholderValue="placeholderValue"/>
 
 	<div @click="saveMd()">保存</div>
 </template>

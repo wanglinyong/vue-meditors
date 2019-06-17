@@ -122,6 +122,7 @@
           @keydown.tab="tab"
           @keyup.enter="enter"
           @keyup.delete="onDelete"
+          :placeholder="placeholderValue"
           ref="textarea"
           :style="{height:scrollHeight?`${scrollHeight}px`:'100%'}"
         ></textarea>

@@ -4,7 +4,7 @@
       <h1>vue-markdown编辑器组件</h1>
       <a target="_blank" href="https://github.com/zhaoxuhui1122/vue-markdown">使用文档</a>
       <div class="content">
-        <mark-down @on-save="save" :theme="theme" :initialValue="initialValue"></mark-down>
+        <mark-down @on-save="save" :theme="theme" :initialValue="initialValue" :placeholderValue="placeholderValue"></mark-down>
       </div>
     </div>
   </div>
@@ -23,6 +23,7 @@
     },
     data() {
       return {
+        placeholderValue:"请输入问题描述",
         initialValue: "",
         theme: 'OneDark'
       };
@@ -33,9 +34,9 @@
       }
     },
     mounted() {
-      setTimeout(() => {
+      /*setTimeout(() => {
         this.initialValue = doc;
-      }, 1000);
+      }, 1000);*/
     }
   };
 

@@ -24,6 +24,7 @@ marked.setOptions({
 export default {
   name: 'markdown',
   props: {
+    placeholderValue:String,
     initialValue: String, // 初始化内容
     theme: { // 默认主题
       type: String,
@@ -58,6 +59,7 @@ export default {
   },
   data() {
     return {
+      placeholderValue:'',//placeholder内容
       value: '', // 输入框内容
       timeoutId: null,
       indexLenth: 100,
