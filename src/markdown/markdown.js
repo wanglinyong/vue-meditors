@@ -59,7 +59,7 @@ export default {
   },
   data() {
     return {
-      placeholderValue:'',//placeholder内容
+      //placeholderValue:'',//placeholder内容
       value: '', // 输入框内容
       timeoutId: null,
       indexLenth: 100,
@@ -267,13 +267,15 @@ export default {
     },
     insertImage(event) { // 插入图片
       $("#uploadFileInput").click();
-    // event.target.firstChild.click();
     },
     changImage(){
       console.log('change image')
        let inputDOM = this.$refs.inputer;
        this.$emit('on-change', {
           files: inputDOM.files
+        },val=>{
+           //将回调成功的图片url插入到textarea中
+           this.insertContent("\n![]("+val+")");
         });
       /* console.log("改变图片");
         let inputDOM = this.$refs.inputer;

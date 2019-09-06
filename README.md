@@ -39,7 +39,7 @@ components:{
 data() {
       return {
       	placeholderValue:"请输入问题描述",//placeholder的内容
-        initialValue: "",//，markdown默认值
+        initialValue: "",//markdown默认值
         theme: 'OneDark'//主题
       };
     },
@@ -90,8 +90,12 @@ data() {
 通过点击图片图标会弹出选择图片对话框，选择图片后会传递一个on-change事件给我们，所以我们只要监听on-change事件即可，它会将文件对象传递给我们
 
 ```
-	changeImg(files){
+	changeImg(files,callback){
 	      	console.log(files)
+	      	//图片上传
+	      	....
+	      	var url = data.url;
+      		callback(url);//通过callback回调将图片地址返回
 	      }
 
 ```	      

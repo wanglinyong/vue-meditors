@@ -4,12 +4,12 @@ const NODE_ENV = process.env.NODE_ENV;
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 module.exports = {
-  // entry: './src/index.js',
+  // entry: './src/index.js',  //打包 配置
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),//'./build'
-    publicPath: '/dist/',//'/build/
-    filename: 'build.js',//index.js
+    path: path.resolve(__dirname, './dist'),//'./build' //打包 配置
+    publicPath: '/dist/',//'/build/   //打包 配置
+    filename: 'build.js',//index.js   //打包 配置
     libraryTarget: 'umd',
     library: 'markdown-vue',
     umdNamedDefine: true
