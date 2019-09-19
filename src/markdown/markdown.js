@@ -24,6 +24,14 @@ marked.setOptions({
 export default {
   name: 'markdown',
   props: {
+    isToolbarShow:{
+      type:Boolean,
+      default:true
+    },
+    preview: {
+      type:Number,
+      default:1
+    },
     placeholderValue:String,
     initialValue: String, // 初始化内容
     theme: { // 默认主题
@@ -35,8 +43,8 @@ export default {
       default: 'auto'
     },
     height: { // 初始化高度
-      type: Number,
-      default: 600
+      type: [Number, String],
+      default:  '600px'
     }, // 宽度
     toolbars: { // 工具栏
       type: Object,
@@ -64,7 +72,7 @@ export default {
       timeoutId: null,
       indexLenth: 100,
       html: '',
-      preview: 1, // 是否是预览状态
+     /* preview: 1,*/ // 是否是预览状态
       isFullscreen: false, // 是否是全屏
       scrollHeight: null,
       scroll: 'markdown', // 哪个半栏在滑动

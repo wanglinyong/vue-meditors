@@ -2,10 +2,10 @@
   <div
     :class="isFullscreen?'markdown fullscreen':'markdown' "
     ref="markdown"
-    :style="{width:editorWidth+'px',height:editorHeight+'px'}"
+    :style="{width:editorWidth+'px',height:editorHeight}"
   >
     <!-- 头部工具栏 -->
-    <ul class="markdown-toolbars">
+    <ul class="markdown-toolbars" v-if="isToolbarShow">
       <li><slot name="title"/></li>
       <li v-if="tools.strong" name="粗体">
         <span @click="insertStrong" class="iconfont icon-strong"></span>

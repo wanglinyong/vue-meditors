@@ -4,7 +4,7 @@
       <h1>vue-markdown编辑器组件</h1>
       <a target="_blank" href="https://github.com/zhaoxuhui1122/vue-markdown">使用文档</a>
       <div class="content">
-        <mark-down @on-save="save" :theme="theme" :initialValue="initialValue" :placeholderValue="placeholderValue"></mark-down>
+        <mark-down @on-save="save" :theme="theme" :initialValue="initialValue" :placeholderValue="placeholderValue" :isToolbarShow="isToolbarShow" :preview="preview" :height="height"></mark-down>
       </div>
     </div>
   </div>
@@ -25,7 +25,10 @@
       return {
         placeholderValue:"请输入问题描述",
         initialValue: "",
-        theme: 'OneDark'
+        theme: 'OneDark',
+        isToolbarShow:false,
+        preview:2,
+        height:'auto'
       };
     },
     methods: {
