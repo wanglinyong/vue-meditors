@@ -16,7 +16,7 @@
     "build:npm": "cross-env NODE_ENV=npm webpack --progress --hide-modules"
   },
   "dependencies": {
-    "highlight.js": "^9.12.0",
+    "highlight.js": "^10.1.2",
     "jquery": "^3.4.1",
     "marked": "^0.4.0",
     "vue": "^2.5.11",
